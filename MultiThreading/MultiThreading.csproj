@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F056A52C-0AD7-4215-BBA9-1F3813C6AE87}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MultiThreading</RootNamespace>
+    <AssemblyName>MultiThreading</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AbortingThreads.cs" />
+    <Compile Include="BackgroundWorker.cs" />
+    <Compile Include="DeadlockDemo.cs" />
+    <Compile Include="LockFreeUpdatesUsingSpinWait.cs" />
+    <Compile Include="ProducerConsumer\ProducerConsumer.cs" />
+    <Compile Include="ThreadPoolUsage.cs" />
+    <Compile Include="Usages\BarrierUsage.cs" />
+    <Compile Include="Cancelation.cs" />
+    <Compile Include="Usages\CountdownEventUsage.cs" />
+    <Compile Include="LazyInit.cs" />
+    <Compile Include="Usages\InterlockedUsage.cs" />
+    <Compile Include="MonitorWaitAndPulse\AutoResetEventWithWaitAndPulse.cs" />
+    <Compile Include="MonitorWaitAndPulse\CountdownWithWaitAndPulse.cs" />
+    <Compile Include="MonitorWaitAndPulse\ManualResetEventWithWaitAndPulse.cs" />
+    <Compile Include="MonitorWaitAndPulse\MonitorWaitPulseUsageForSyncWork.cs" />
+    <Compile Include="MonitorWaitAndPulse\RendezvousWithWaitAndPulse.cs" />
+    <Compile Include="Usages\MemoryFenciesUsage.cs" />
+    <Compile Include="Usages\MonitorUsage.cs" />
+    <Compile Include="Usages\MutexUsage.cs" />
+    <Compile Include="PlinqUsage.cs" />
+    <Compile Include="ProducerConsumer\ProducerConsumerWithBlockingCollection.cs" />
+    <Compile Include="ProducerConsumer\ProducerConsumerWithWaitPulse.cs" />
+    <Compile Include="Usages\ReaderWriterLockSlimUsage.cs" />
+    <Compile Include="Usages\SemaphoreSlimUsage.cs" />
+    <Compile Include="Usages\SpinLockUsage.cs" />
+    <Compile Include="Usages\SpinWaitUsage.cs" />
+    <Compile Include="SynchronizationContext.cs" />
+    <Compile Include="ProducerConsumer\ProducerConsumerQueueWithResetEvent.cs" />
+    <Compile Include="TasksUsage.cs" />
+    <Compile Include="ThreadLocalStorageUsage.cs" />
+    <Compile Include="TwoWaySignaling.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="MonitorWaitAndPulse\SemaphoreWithWaitAndPulse.cs" />
+    <Compile Include="MonitorWaitAndPulse\WaitHandleWithWaitAndPulse.cs" />
+    <Compile Include="Usages\WaitHandleUsage.cs" />
+    <Compile Include="MonitorWaitAndPulse\MonitorWaitPulseUsage.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
