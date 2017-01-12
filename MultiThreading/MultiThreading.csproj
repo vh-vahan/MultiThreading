@@ -48,6 +48,7 @@
     <Compile Include="BackgroundWorker.cs" />
     <Compile Include="DeadlockDemo.cs" />
     <Compile Include="LockFreeUpdatesUsingSpinWait.cs" />
+    <Compile Include="ProducerConsumer\DelayedLogger.cs" />
     <Compile Include="ProducerConsumer\ProducerConsumer.cs" />
     <Compile Include="ThreadPoolUsage.cs" />
     <Compile Include="Usages\BarrierUsage.cs" />
