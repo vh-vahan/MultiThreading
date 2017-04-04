@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MultiThreading</RootNamespace>
     <AssemblyName>MultiThreading</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -50,6 +51,11 @@
     <Compile Include="LockFreeUpdatesUsingSpinWait.cs" />
     <Compile Include="ProducerConsumer\DelayedLogger.cs" />
     <Compile Include="ProducerConsumer\ProducerConsumer.cs" />
+    <Compile Include="ProducerConsumer\ProducersAndConsumers\Client.cs" />
+    <Compile Include="ProducerConsumer\ProducersAndConsumers\Consumer.cs" />
+    <Compile Include="ProducerConsumer\ProducersAndConsumers\Delegator.cs" />
+    <Compile Include="ProducerConsumer\ProducersAndConsumers\Message.cs" />
+    <Compile Include="ProducerConsumer\ProducersAndConsumers\Producer.cs" />
     <Compile Include="ThreadPoolUsage.cs" />
     <Compile Include="Usages\BarrierUsage.cs" />
     <Compile Include="Cancelation.cs" />
